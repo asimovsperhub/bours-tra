@@ -1,0 +1,11 @@
+syntax = "proto3";
+package protocol;
+option go_package="/protocol";
+
+message Message {
+    string uid = 1;         // 发送消息用户uid
+    string content = 2;      // 文本消息内容
+    int32 apiType = 3;   // 接口类型：1.文字
+    string type = 4;         // 消息传输类型：如果是心跳消息，该内容为pong
+    string respondCode = 5; //回应code
+}
